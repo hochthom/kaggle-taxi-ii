@@ -25,7 +25,7 @@ git clone git://github.com/hochthom/kaggle-taxi-ii.git
 
 ### Download the training data
 
-Download the data files from [Kaggle](https://www.kaggle.com/c/pkdd-15-taxi-trip-time-prediction-ii/data). Place and extract the files in the data directory.
+Download the data files from [Kaggle](https://www.kaggle.com/c/pkdd-15-taxi-trip-time-prediction-ii/data). Place and extract the files into the data directory.
 
 ### Create the training and test sets
 
@@ -54,8 +54,8 @@ Result: train_pp_RND.csv with size: 1928087 x 17, Duration: 911.5 sec *
 ```
 create_training_set_Experts.py
 ```
-Result: train_pp_TST_0.csv - train_pp_TST_319.csv, no file for trip 125
-319 Training Sets, size 3 - 109915 x 17, Duration: 10135.2 sec *
+Result: 319 Training Sets, with size 3 - 109915 x 17, Duration: 10135.2 sec *  
+train_pp_TST_0.csv - train_pp_TST_319.csv, no file for trip 125.
 
 *Note: The listed running times were achieved on a 12-core server with 24GByte of ram. 
 The running time may be considerably longer if you use a machine with less ram!
@@ -65,13 +65,13 @@ The running time may be considerably longer if you use a machine with less ram!
 ```
 mk_submission.py
 ```
-creates submissions for models N1, N2, N3, RND; Duration: 5175.5 sec *
+creates submissions for models N1, N2, N3, RND; Duration: 5175.5 sec *  
 Result: my_submission_xx.csv with xx in [N1,N2,N3,RND]
 
 ```
 mk_submission_Experts.py
 ```
-creates the expert model predictions, Duration: 2968.3 sec *
+creates the expert model predictions, Duration: 2968.3 sec *  
 Result: predictions_TVT_experts.pkl
 
 *Note: The listed running times were achieved on a 12-core server with 24GByte of ram. 
