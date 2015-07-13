@@ -3,6 +3,7 @@ import os
 import time
 import numpy as np
 import pandas as pd
+import cPickle as pickle
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.cross_validation import ShuffleSplit, KFold
 
@@ -15,7 +16,7 @@ res = {}
 for filename in ['train_pp_N1.csv', 'train_pp_N2.csv', 'train_pp_N3.csv', 
                  'train_pp_RND.csv']:
     print('reading training data from %s ...' % filename)
-    df = pd.read_csv(os.path.join('../data/', filename), nrows=500000)
+    df = pd.read_csv(os.path.join('../data/', filename))#, nrows=50000)
 
     y = np.log(df['len'].values*15 + 1)
     d1 = haversineKaggle(df[['xs', 'ys']].values, df[['xe', 'ye']].values)
